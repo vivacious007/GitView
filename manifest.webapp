@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "name": "Gitview",
+  "launch_path": "/index.html",
+  "description": "Angular.js based web application to fetch an user's data from GitHub.",
+  "icons": {
+    "48": "images/logo48.png",
+    "60": "images/logo60.png",
+    "128": "images/logo128.png",
+    },
+  "developer": {
+    "name": "Priyam Srivastava",
+    "url": "http://priyam.webstart.net84.net/priyam/"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {},
+  "locales": {
+    "en": {
+      "name": "Gitview",
+      "description": "Angular.js based web application to fetch user statistics from GitHub."
+    },
+    "en-US": {
+      "name": "Gitview",
+      "description": "Angular.js based web application to fetch user statistics from GitHub."
+    }
+  }
+}
+

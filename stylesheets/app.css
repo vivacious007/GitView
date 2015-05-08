@@ -1,0 +1,190 @@
+/**
+ * Stylesheet Index
+ * ================
+ *
+ * 1. Elements
+ * 2. Classes
+ * 3. IDs
+ * 4. Media Queries
+**/
+
+/* 1. Elements*/
+body {
+	background:url(../images/bg.png)repeat-y;
+	color:white;
+    min-width: 320px;
+    overflow-x: hidden;
+    padding-top: 25px;
+    padding-bottom: 32px;
+	text-align: center;
+}
+
+hr {
+	
+	border:			2px solid;
+	border-color:	#aaa transparent #fff;
+	clear:			both;
+	margin-bottom:  25px;
+	margin-top:     20px;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+/* 2. Classes*/
+.img-circle	{
+	width: 80px;
+}
+
+.initial {
+	padding-top: 100px;
+}
+
+.step 	{
+	padding-top: 48px;
+}
+
+.throbber{
+	position: fixed;
+	z-index: 2000;
+	left: 47%;
+}
+
+.throbber .inside .logo img{
+	animation:0.9s steps(500, end) 100ms alternate infinite fader;
+}
+
+.throbber .inside .rotator{
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAEfklEQVRIib3Wa2wUVRQH8AHEAiICJgRJ2W7fj91Cl93ug+22S7u7pRADwYj6oTFRP2AMLwnEiNg1xg9ghARjQiOkCrizc2fm3pldbBCJq+ycc6bFiERjYjBBQQ0+Y1R8RHD9QJFHC2mx6z85H+bemfvLSe69GUkaRWYf7J9Rns7f71SsneVpOFwuw9lyGc6WyXC2LA0fOVLWgfmytbFUzgdGs95N45Rzzsq01VepQKFSgUKFAoWKNBTKh8o5VA7ZulCWgnPzU9bx0hSsvWWwSoFktYKFKgUKVUNo5QhomQwXHTKcd8jWGUfKQocMrHTv4dlj664vN7OGwYkahoVqhoXL8NVoxdVoagR0J5s6VvCDWoaFmqGqVq7AFWk4XZG2djlT1gannI86U8dWOmTocchW2iFbZ+anrCOlB/LRMXVZy+B4LYMLNQz/vgxf6hZOVMljXGyU4NY6Ff6oZ/hnHYO/ahS8WMuwUKNActwxSZKkCmY5Ghj8Uq/i+ToGv1+BrYeLAkqSJLkUeMXF8Kd6FX5uYPhrHcPfalV4pnggy01vYPBdA8MfXAx+HMI/Lhp4Cc0vdat4zq3BN24Vvm1Q8XuXgg8VFXUza3Ojil82qvCVW4OvXRp8WlRQkiSpUYXtCzQ6vUDDz90qfOFW4dX/AcV9C1U8tVDFU40afubWYF0RmAnXPDVpaDTp9Mm/peET404mkxOvR1/0aHTSo9HJJp0+XKjRmqKjHg2f9ej0vkfD4006Di7ScMc4kxMkxiZdi+rQ7dERPRqCV0NrEaf+cSWTyYnRZO62a8a8zGpZpON7Po7venV6x8fxqFeFxHiZ3t7eyd7e3snXDWan+Tge9el0pFnHwz5O/T6O+8ZFZGxStC83ZRgqSZLk1WGTT6c3mzlm/RyNgE6an9N/vewnRFlueojhVBdjtw+bXcBhjp+j0cxJ93NkAU5yQOD+oE7hW+KSyYnLD+Vnxdjbd92bzU7r2t1fMuJ7zRqt9nNUggLfCHB8PcTtfQFu7wlyWjUWr2t3f8kyNjg3wWFOVORmJva/dUe0Lzflhh8EOWwNcnwtKGhvgNt7Qjq93CLopYigLYsFNN0Mi/blpsRNa95yTvXLdChbxgbnLj+UnxVluek3Rb292WlBQT2XwZBBO1sEbW8R9HxE2NsiAje0CkhEBPrbdSiLcapfkrFc7QYuTmQG2jsF+jszg65EZqC8Uz92TyfD2WHTunPYOR0JDgl7fVjYu8KGvSPM6YUWQT1tBj0dMXFz1LTXtwt6vN2gx+LC7o5laHUsY6+IZ7EjYVAgwcHdJaAyblrzOvjA3SPu3BtlsYBEi6CeiGE/FxH2tlbDfqpV2JuWGLQuatKajgw+Ghd2d4dBD3SIgZUxg2JLswOhmIGNnSZWJTjMGXYpjCZNIjczwmFFG6cn2wRtaTNoY5ugtVGT1sRMfCQu7O6EaT8YM2lVp4lL4yaFuwy7oeugPWPM2PWp2t1f0qrZ1RGdwm3cji/htCom7PtiGXtFhzEQiZuWL8YsR4jhqH6y/wGjN55P0DKcoQAAAABJRU5ErkJggg==) no-repeat scroll center center transparent;
+	width: 33px; 
+	height: 33px;
+	margin: 23px auto;
+	animation:0.9s steps(30, end) 0s normal none infinite spin;
+}
+
+@keyframes spin{
+	from{transform:rotate(0deg);}
+	to{transform:rotate(360deg);}
+}
+@keyframes fader{
+	from{transform:scale(0.9);opacity:0.3;}
+	to{transform:scale(0.95);opacity:1;}
+}
+
+/*IDs*/
+#displayBlock	{
+	padding-top: 15px;
+}
+
+#languages {
+    margin-left: 34%;
+    text-align: left;
+    width: 33%;
+}
+
+#numbers {
+	margin-bottom: 25px;
+}
+
+#pieChart {
+	margin-left: 2%;
+	margin-bottom: -80px;
+	margin-top: -30px;
+	text-align: center;
+}
+
+#search {
+	text-align: center;
+}
+
+/*Media Queries*/
+@media (max-height: 480px) {
+	body {
+		padding-top: 5px;
+	}
+	#displayBlock {
+		padding-top: 0;
+	}
+}
+
+@media (min-width: 992px) {
+	#numbers		{
+		text-align: left;
+	}
+
+	#personal-data	{
+		text-align: right;
+	}
+    #pieChart {
+        margin-left: 37%;
+    }
+}
+
+@media (max-width: 992px) {  
+	.throbber{
+		left: 45%;
+	}
+    #pieChart {
+        margin-left: 35%;
+    }
+}
+@media (max-width: 872px) {  
+	.throbber{
+		left: 45%;
+	}
+    #pieChart {
+        margin-left: 32%;
+    }
+}
+@media (max-width: 768px)	{
+	.throbber{
+		left: 42%;
+	}
+    #pieChart {
+        margin-left: 30%;
+    }
+}
+@media (max-width: 600px)	{
+    #pieChart {
+        margin-left: 25%;
+    }
+}
+@media (max-width: 520px)	{
+	.throbber{
+		left: 40%;
+	}
+    #pieChart {
+        margin-left: 22%;
+    }
+}
+@media (max-width: 460px)	{
+	.throbber{
+		left: 38%;
+	}
+    #pieChart {
+        margin-left: 18%;
+    }
+}
+@media (max-width: 425px)	{
+    #pieChart {
+        margin-left: 15%;
+    }
+}
+@media (max-width: 360px)	{
+	.throbber{
+		left: 36%;
+	}
+    #languages {
+        margin-left: 30%;
+        text-align: left;
+    }
+    #pieChart {
+        margin-left: 9%;
+    }
+}
+@media (max-width: 320px)	{
+    #pieChart {
+        margin-left: 5%;
+    }
+}
