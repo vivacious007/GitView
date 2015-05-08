@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <!-- Meta Stuff -->
+    <meta charset="UTF-8">
+    
+    <!-- Title -->
+    <title id="title">Gitview - GitHub Statistics!</title>
+    
+    <!-- le favicon -->
+    <link rel="icon" href="images/logo.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css"> 
+
+    <!-- App Specific CSS -->
+    <link rel="stylesheet" href="stylesheets/app.css"> 
+
+    <!-- Minified Angular Core JS-->
+    <script src="scripts/angular.min.js"></script>
+
+    <!-- Minified Underscore JS-->
+    <script src="scripts/underscore-min.js"></script>
+
+    <!-- Minified Raphael JS-->
+    <script src="scripts/gRaphael/raphael.js"></script>
+
+    <!-- Minified gRaphael JS-->
+    <script src="scripts/gRaphael/g.raphael-min.js"></script>
+
+    <!-- Minified gRaphael Pie JS-->
+    <script src="scripts/gRaphael/g.pie-min.js"></script>
+
+    <!-- App Specific JS-->
+    <script src="scripts/app.js"></script>
+
+  </head>
+
+  <body ng-controller="AppCtrl as app">
+
+    <div class="initial" id="header">
+	<img src="images/logo.png" width="200px" height="200px">
+      <h1>Git View	</h1>
+      <p class="lead">GitHub Statistics!</p>
+    </div>
+
+    <!-- User Input Space -->
+      <div>
+        <form id="search">
+          <input type="text" placeholder="GitHub username..." ng-model="formUsernameText" ng-model-instant>
+          <button class="btn" ng-click="fetchData()" href="#displayBlock">Go</button>
+        </form>
+      </div>
+
+    <div class="hidden" id="intermediate">
+      <hr>
+      <div class="throbber" id="throbber">
+        <div class="inside">
+          <div class="logo">
+            <img src="images/logo90.png"/>
+          </div>
+          <div class="rotator"></div>
+        </div>
+      </div>
+    </div>
+      
+    <!-- HTTP Request Space -->  
+      <div id="displayBlock" class="hidden">
+        <ul class="list-unstyled">
+          <li><a href="{{html_url}}"><img src="{{avatar_url}}" class="img-circle"></a></li>
+          <li><h3>{{name}}</h3></li>
+          <div class="col-md-6" id="personal-data">
+            <li><h4><u>Personal Details</u></h4></li>
+            <li><strong>Company:</strong> {{company}}</li>
+            <li><strong>Location:</strong> {{location}}</li>
+            <li><strong>Website:</strong> <a href="{{websiteLink}}">{{website}}</a></li>
+            <li><strong>Email ID:</strong> <a href="{{emailLink}}">{{email}}</a></li>
+            <li><strong>Available for Hire:</strong> {{hireable}}</li>
+          </div>
+          
+          <div class="col-md-6" id="numbers">
+            <li><h4><u>Numbers</u></h4></li>
+            <li><strong>Gitub User since:</strong> {{created_at}}</li>
+            <li><strong>Public Repositories:</strong> {{public_repos}}</li>
+            <li><strong>Public Gists:</strong> {{public_gists}} </li>
+            <li><strong>Followers:</strong> {{followers}}</li>
+            <li><strong>Following:</strong> {{following}}</li>
+          </div>
+          
+        </ul>
+        
+        <hr/>
+
+        <div id="langUsageStats">
+          <div id="pieChart"></div>
+          <div id="count"></div><br/>
+          <div> <span id="repoStats"></span>
+            <table id="languages"></table>
+          </div>
+        </div>
+        <div><br/><hr/><span>Developed by <a href="http://priyam.webstart.net84.net/priyam/">Vivacious</a>!</span></div>
+      </div>
+  </body>
+</html>
